@@ -98,7 +98,7 @@
 				
 		var path = getCookie("loginpage");
 		if(path == ""){	
-			window.location.href = "/overview";
+			window.location.href = "/overview.php";
 		}else{
 			window.location.href = path;
 		}

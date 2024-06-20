@@ -21,7 +21,7 @@
     <div class="container theme-showcase">
 	  
       <div class="page-header">
-        <h2><a href="shipyard"><b>Shipyard</b></a> / <a href="shipyard_compact">Compact</a></h2>
+        <h2><a href="shipyard.php"><b>Shipyard</b></a> / <a href="shipyard_compact">Compact</a></h2>
       </div>
 
 <div class="content">

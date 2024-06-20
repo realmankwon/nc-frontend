@@ -50,9 +50,9 @@
         <div style="color:rgba(255, 255, 255, 0.40);">Building Level: <span id="building_level"></span></div>
         <div style="margin:34px 0 14px 0;" class="overview">
          <img src="img/icons/buildings.png" style="width:14px;"> <a href="buildings.php">Buildings</a>
-         <img src="img/icons/shipyard.png" style="width:14px; margin:0 0 0 9px;"> <a href="shipyard">Shipyard</a>
+         <img src="img/icons/shipyard.png" style="width:14px; margin:0 0 0 9px;"> <a href="shipyard.php">Shipyard</a>
          <img src="img/icons/fleet.png" style="width:14px; margin:0 0 0 9px;"> <a href="fleet.php">Fleet</a>
-         <img src="img/icons/missions.png" style="width:14px; margin:0 0 0 9px;"> <a href="fleet_missions">Missions</a>
+         <img src="img/icons/missions.png" style="width:14px; margin:0 0 0 9px;"> <a href="fleet_missions.php">Missions</a>
          <img src="img/icons/galaxy.png" style="width:14px; margin:0 0 0 9px;"> <a href="galaxy.php">Galaxy</a>
         </div>
         <div style="border-bottom: 1px solid rgba(255, 255, 255, 0.20);margin:0 0 8px 0;"></div>
@@ -77,7 +77,7 @@
         <div style="color:rgba(255, 255, 255, 0.40);">Own Missions: <span id="mission_own">0</span></div>
         <div style="color:rgba(255, 255, 255, 0.40);">Friendly Missions: <span id="mission_friendly">0</span></div>
         <div style="color:rgba(255, 255, 255, 0.40);color:#a94442">Hostile Missions: <span id="mission_hostile">0</span></div>
-        <div style="margin:10px 0 4px 0;"><a href="fleet_missions">Missions</a> »</div>
+        <div style="margin:10px 0 4px 0;"><a href="fleet_missions.php">Missions</a> »</div>
       </div>
     </div>
 </div>
@@ -232,7 +232,7 @@
 
 <p>Good news, Commander! We have improved the Explorer considerably We are able to mine Stardust and find blueprints of an old alien race as well as planets during our explorations. Explore the galaxy - earn rewards! You have the chance to find Planets, Stardust, Reward-Blueprints and the coveted Yamato Blueprints while exploring deep space. This makes explorations tremendous valuable. Start your exploration now and don't miss the chance to earn <a target="_blank" href="https://guide.nextcolony.io/reward">rewards</a>.</p>
 
-<p>There are 11 different alien blueprints hidden in the galaxy. And there is also a very special gem waiting for you: Dreadnought Zaneel is a laser-armed battleship and pretty hard to find. You can already see the new battleships in your <a href="shipyard" class="steem-keychain-checked">shipyard</a>. Start your exploration now and don't miss the chance to earn <a target="_blank" href="https://guide.nextcolony.io/reward">rewards</a>.</p>
+<p>There are 11 different alien blueprints hidden in the galaxy. And there is also a very special gem waiting for you: Dreadnought Zaneel is a laser-armed battleship and pretty hard to find. You can already see the new battleships in your <a href="shipyard.php" class="steem-keychain-checked">shipyard</a>. Start your exploration now and don't miss the chance to earn <a target="_blank" href="https://guide.nextcolony.io/reward">rewards</a>.</p>
 <!-- /logbook end -->
 
 <div style="text-align: right;margin:30px 0 0 0;position:relative;top:52px;left:0px;"><img src="img/char/char6.png" width="120px" style="margin:-70px 0 0 0;"></div>

@@ -16,7 +16,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand headerfix-brand" href="/overview"><b>Next</b>Colony</a>
+          <a class="navbar-brand headerfix-brand" href="/overview.php"><b>Next</b>Colony</a>
         </div>
         <!--Start Nav-->
         <?php if(isset($_COOKIE['access'])) {
@@ -33,9 +33,9 @@
                 <a class="dropdown-toggle headerfix-a" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img id="nav_curimg" src="img/planets/co_atm_1.png" width="18" height="18" style="border-radius:100px" /><p style="display:inline" id="nav_curplanet">loading...</p><span class="caret"></span></a>
                 <ul class="dropdown-menu">
                 <li><a href="buildings.php">Buildings</a></li>
-                <li><a href="shipyard">Shipyard</a></li>
+                <li><a href="shipyard.php">Shipyard</a></li>
                 <li><a href="fleet.php">Fleet</a></li>
-                <li><a href="fleet_missions">Missions</a></li>
+                <li><a href="fleet_missions.php">Missions</a></li>
                 <li><a href="galaxy.php">Galaxy</a></li>
                 <li><a href="production">Production</a></li>
                 </ul>
