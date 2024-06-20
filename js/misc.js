@@ -35,11 +35,11 @@ function pickApiServer() {
   ) {
     jarunikServer = "http://nc-client-test.jarunik.com";
     // apiServer = "http://140.82.34.132/api"
-    apiServer = "http://192.168.50.112:5000";
+    apiServer = "http://localhost:5000";
   } else {
     jarunikServer = "https://nc-client.jarunik.com";
     // apiServer = 'https://api.nextcolony.io'
-    apiServer = "http://192.168.50.112:5000";
+    apiServer = "http://localhost:5000";
   }
 }
 
