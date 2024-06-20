@@ -21,7 +21,7 @@
     <div class="container theme-showcase">
 	  
       <div class="page-header">
-        <h2><a href="fleet_sell">Sell Ships</a></h2>
+        <h2><a href="fleet_sell.php">Sell Ships</a></h2>
       </div>
 
 <div class="content">

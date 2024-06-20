@@ -1,6 +1,4 @@
 <script src="/js/jquery.js"></script>
-<script src="/js/sc3.js"></script>
-<script src="/js/sc2init.js"></script>
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">

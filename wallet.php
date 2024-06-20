@@ -21,7 +21,7 @@
     <div class="container theme-showcase">
 	  
       <div class="page-header">
-      <h2><a href="wallet"><b>Wallet</b></a> / <a href="wallet_ranking">Ranking</a></h2>
+      <h2><a href="wallet.php"><b>Wallet</b></a> / <a href="wallet_ranking">Ranking</a></h2>
       </div>
 
 <div class="content">

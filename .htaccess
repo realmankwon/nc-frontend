@@ -1,0 +1,3 @@
+Options +FollowSymLinks +SymLinksIfOwnerMatch
+RewriteEngine on
+RewriteBase /

@@ -242,7 +242,7 @@
         <h4 class="modal-title">Respawn</h4>
       </div>
       <div class="modal-body">
-          If all the tiles around you are already explored or you are constantly attacked, it is time to start over in a new location. Respawn allows you to start all over again in the beta galaxy. You'll start in a new area with potentially many empty tiles waiting to be explored by you. On respawn you will sacrifice the starter planet (alpha planet). You will get a new empty starter planet in a new location with new coordinates.<div style="margin:12px 0 12px 0;">Fee for respawn: <b>1000 Stardust</b></div><div id="nesr" style="color:#a94442;margin:0 0 10px 0;"><i>Not enough Stardust in your <a href="wallet" style="color:#a94442;" target="blank" class="steem-keychain-checked">wallet</a>.</i></div><div style="color:#a94442;margin:0 0 12px 0;"><i>- On respawn you will lose the planet with all ships, merged runes, and activated blueprints on it.<br>- Respawn is only possible without active own missions.<br>- Please read this notes carefully and be aware that this transaction is irreversible.</i></div>
+          If all the tiles around you are already explored or you are constantly attacked, it is time to start over in a new location. Respawn allows you to start all over again in the beta galaxy. You'll start in a new area with potentially many empty tiles waiting to be explored by you. On respawn you will sacrifice the starter planet (alpha planet). You will get a new empty starter planet in a new location with new coordinates.<div style="margin:12px 0 12px 0;">Fee for respawn: <b>1000 Stardust</b></div><div id="nesr" style="color:#a94442;margin:0 0 10px 0;"><i>Not enough Stardust in your <a href="wallet.php" style="color:#a94442;" target="blank" class="steem-keychain-checked">wallet</a>.</i></div><div style="color:#a94442;margin:0 0 12px 0;"><i>- On respawn you will lose the planet with all ships, merged runes, and activated blueprints on it.<br>- Respawn is only possible without active own missions.<br>- Please read this notes carefully and be aware that this transaction is irreversible.</i></div>
       </div>
       <div class="modal-footer">
         <button type="button" id="renow" class="btn btn-success btn-sm btn-block">Respawn now</button>
@@ -367,13 +367,7 @@
       <div>
         <div>
           <div class="row">
-            <div class="col-md-6">
-            <div style="margin:0 0 10px 0;"><b>SteemConnect</b></div>
-            SteemConnect is an easy and fast way to register/log in. It works on smartphones and is therefore recommended for mobile devices.<br><br>
-            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Easy and fast 3-click-registration/login<br>
-            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Works on smartphones<br><br>
-            <button type="button" onclick="Login()" class="btn btn-info btn-sm btn-block">Registration/Login</button><br><br>
-            </div>
+
             <div class="col-md-6">
             <div style="margin:0 0 10px 0;"><b>Keychain</b></div>
             Keychain is the safest way to register/log in. You have to download it from the <a href="https://chrome.google.com/webstore/detail/steem-keychain/lkcjlnjfpbikmcmbachjpdbijejflpcm" target="_blank" style="color:#333; text-decoration:underline;">Chrome Web Store</a>, then log in to Keychain. Type you username in the form and click on registration.

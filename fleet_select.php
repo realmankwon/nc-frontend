@@ -21,7 +21,7 @@
     <div class="container theme-showcase">
 	  
       <div class="page-header">
-        <h2><a href="fleet">Fleet</a> » <a href="fleet_select">Select</a> » <a href="fleet_send">Send</a> » <a href="fleet_load">Load</a></h2>
+        <h2><a href="fleet.php">Fleet</a> » <a href="fleet_select.php">Select</a> » <a href="fleet_send.php">Send</a> » <a href="fleet_load.php">Load</a></h2>
       </div>
 
 <div class="content">

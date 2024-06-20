@@ -27,7 +27,7 @@
 <div class="content">
 
 <!-- /ressources -->
-<p id="info_noitem">You don't own any items. You can buy items in the <a href="shop">shop</a> and in the <a href="market">market</a>.</p>
+<p id="info_noitem">You don't own any items. You can buy items in the <a href="shop.php">shop</a> and in the <a href="market.php">market</a>.</p>
 
 <div class="row" id="item_row">
 

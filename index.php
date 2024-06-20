@@ -74,8 +74,6 @@ Trade digital collectibles</p>
     <!-- Am Ende des Dokuments platziert, damit Seiten schneller laden -->
     <script src="./js/jquery.js"></script>
     <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/sc3.js"></script>
-    <script src="./js/sc2init.js"></script>
     <script src="./js/misc.js"></script>
     <script src="./js/auth.js"></script>
     

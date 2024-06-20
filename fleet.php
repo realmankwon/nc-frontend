@@ -22,7 +22,7 @@
 	  
       <div class="page-header" id="fleet_link">
         <h2 id="fleet_header">Fleet</h2>
-        <div style="float: right!important; margin-top: -30px;" class="infocolor"><a href="fleet_sell" class="infocolor">Sell Ships</a></div>
+        <div style="float: right!important; margin-top: -30px;" class="infocolor"><a href="fleet_sell.php" class="infocolor">Sell Ships</a></div>
       </div>
 
 <div class="content">
@@ -58,8 +58,8 @@
   </select>
   </div>
   <div style="margin:0 0 10px 0;"><button onclick="NextStep('select',1)" type="button" id="fleet_main_btn" class="btn btn-success btn btn-block" style="margin:0 auto 0 auto; width:60%;" disabled>Next step</button></div>
-  <div style="font-size:12px; text-align: center; display:none" id="ehancemc">You can't start a mission. Enhance the mission control <a href="/skills">skill</a>.</div>
-  <div style="font-size:12px; text-align: center; display:none" id="upgradebuilding">You can't start a mission. Upgrade the base <a href="/buildings">building</a>.</div>
+  <div style="font-size:12px; text-align: center; display:none" id="ehancemc">You can't start a mission. Enhance the mission control <a href="skills.php">skill</a>.</div>
+  <div style="font-size:12px; text-align: center; display:none" id="upgradebuilding">You can't start a mission. Upgrade the base <a href="buildings.php">building</a>.</div>
   <div style="font-size:12px; text-align: center; display:none" id="preventplanetsale">You can't start a mission. Cancel the market listing for the planet.</div>
   <br>
   <br>

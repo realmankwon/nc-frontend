@@ -52,8 +52,6 @@
 
 <!--   SCRIPT    -->
 <script src="js/jquery.js"></script>
-<script src="/js/sc3.js"></script>
-<script src="/js/sc2init.js"></script>
 <script src="/js/misc.js?ver=<?php echo $config['version'] ?>"></script>
 
 <script>
@@ -62,21 +60,21 @@
 	
 	var user = "";
 	
-	api.setAccessToken(auth);
+	// api.setAccessToken(auth);
 	
-	api.me(function (err, res) {
-		if(res){
-			json['user'] = res.user;
-			user = res.user;
-			console.log(res);
-			Auth();
-		}else{
-			console.log(err);
-			window.location.href = "/";
-			document.cookie = "access=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
-		}
-	});
-	
+	// api.me(function (err, res) {
+	// 	if(res){
+	// 		json['user'] = res.user;
+	// 		user = res.user;
+	// 		console.log(res);
+	// 		Auth();
+	// 	}else{
+	// 		console.log(err);
+	// 		window.location.href = "/";
+	// 		document.cookie = "access=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+	// 	}
+	// });
+	Auth();
 	
 	function Auth(){
 		$.ajax({
@@ -85,38 +83,12 @@
 			data: json,
 			success: function(msg) {
 				console.log(msg);
-				NewAuth(msg);
+				Login();
 			},
 			error: function(msg) {
 
 			}
 		});
-	}
-
-	function NewAuth(msg){
-		var scJson = {};
-		var scCmd = {};
-		scJson['username'] = user;
-		scJson['type'] = "newuser";
-		scCmd['tr_var1'] = user;
-		scJson['command'] = scCmd;
-
-		console.log(auth)
-		console.log(user);
-		api.setAccessToken(auth);
-		var njson = JSON.stringify(scJson);
-
-		if(msg === undefined || msg.length == 0){
-			CustomJsonHandler(user,sc2app,njson,function(res,err){
-				var json = {};
-				json['user'] = user;
-				MakeAPhonecall(apiServer + '/loaduser',json,[],function(err,res){
-					Login();
-				},'GET');
-			});
-		}else{
-			Login();
-		}
 	}
 
 	function Login(){

@@ -217,8 +217,6 @@
     <!-- Am Ende des Dokuments platziert, damit Seiten schneller laden -->
     <script src="./js/jquery.js"></script>
     <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/sc3.js"></script>
-    <script src="./js/sc2init.js"></script>
 
 </body>
 </html>

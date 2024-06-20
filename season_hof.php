@@ -21,7 +21,7 @@
     <div class="container theme-showcase">
 	  
     <div class="page-header">
-      <h2><a href="season">Season</a> / <a href="season_hof"><b>Hall of Fame</b></a></h2>
+      <h2><a href="season.php">Season</a> / <a href="season_hof"><b>Hall of Fame</b></a></h2>
     </div>
 
 <div class="content">

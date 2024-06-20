@@ -22,7 +22,7 @@
 	  
       <div class="page-header">
         <h2>Overview</h2>
-        <div style="float: right!important; margin-top: -30px;" class="infocolor"><a class="infocolor" href="market">Market</a> / <a class="infocolor" href="buffs">Buffs</a> / <a class="infocolor" href="shop">Shop</a></div>
+        <div style="float: right!important; margin-top: -30px;" class="infocolor"><a class="infocolor" href="market.php">Market</a> / <a class="infocolor" href="buffs.php">Buffs</a> / <a class="infocolor" href="shop.php">Shop</a></div>
       </div>
 
 <div class="content">
@@ -49,11 +49,11 @@
         <div style="color:rgba(255, 255, 255, 0.40);">Planet ID: <span id="planet_id"></span></div>
         <div style="color:rgba(255, 255, 255, 0.40);">Building Level: <span id="building_level"></span></div>
         <div style="margin:34px 0 14px 0;" class="overview">
-         <img src="img/icons/buildings.png" style="width:14px;"> <a href="buildings">Buildings</a>
+         <img src="img/icons/buildings.png" style="width:14px;"> <a href="buildings.php">Buildings</a>
          <img src="img/icons/shipyard.png" style="width:14px; margin:0 0 0 9px;"> <a href="shipyard">Shipyard</a>
-         <img src="img/icons/fleet.png" style="width:14px; margin:0 0 0 9px;"> <a href="fleet">Fleet</a>
+         <img src="img/icons/fleet.png" style="width:14px; margin:0 0 0 9px;"> <a href="fleet.php">Fleet</a>
          <img src="img/icons/missions.png" style="width:14px; margin:0 0 0 9px;"> <a href="fleet_missions">Missions</a>
-         <img src="img/icons/galaxy.png" style="width:14px; margin:0 0 0 9px;"> <a href="galaxy">Galaxy</a>
+         <img src="img/icons/galaxy.png" style="width:14px; margin:0 0 0 9px;"> <a href="galaxy.php">Galaxy</a>
         </div>
         <div style="border-bottom: 1px solid rgba(255, 255, 255, 0.20);margin:0 0 8px 0;"></div>
         <div style="margin:0 0 4px 0;"><a id="planet_view">View</a> / <span><a id="renameinibtn">Rename</a><span id="psign"> / </span><a id="giftplanetbtn">Gift</a><span id="pssign"></span><a id="burnplanetbtn"></a><span id="psssign"></span><a id="sellplanetbtn"></a></span></div>
@@ -91,7 +91,7 @@
         <div style="color:rgba(255, 255, 255, 0.40);">Percent of total Supply: <span id="stardustpercent"></span>%</div>
         <div style="color:rgba(255, 255, 255, 0.40);">Trade Stardust: <a href="https://steem-engine.com/?p=market&amp;t=STARDUST" target="_blank" class="steem-keychain-checked">Steem Engine</a> <img src="img/icons/link.png" width="13px" height="13px" style="margin:-2px 0 0 0;"></div>
         <div style="color:rgba(255, 255, 255, 0.40);">Total Supply: <span class="stardust" id="stardustsupply">0 Stardust</span></div>
-        <div style="margin:10px 0 4px 0;"><a href="wallet">Wallet</a> / <a href="wallet_ranking">Ranking</a> / <a id="stardusttransfer">Transfer</a> / <a id="stardustconvert">Convert</a></div>
+        <div style="margin:10px 0 4px 0;"><a href="wallet.php">Wallet</a> / <a href="wallet_ranking">Ranking</a> / <a id="stardusttransfer">Transfer</a> / <a id="stardustconvert">Convert</a></div>
       </div>
     </div>
 </div>
@@ -105,7 +105,7 @@
         <div style="color:rgba(255, 255, 255, 0.40);">Prize Pool: <span id="seasonprize">0</span> STEEM</div>
         <div style="color:rgba(255, 255, 255, 0.40);">Leach Rate: <span id="seasonleach">0</span>% / Deploy Rate: <span id="seasondeploy">0</span>%</div>
         <div style="color:rgba(255, 255, 255, 0.40);"><span id="seasontimer">.</span></div>
-        <div style="margin:10px 0 4px 0;"><a href="season">Season</a> »</div>
+        <div style="margin:10px 0 4px 0;"><a href="season.php">Season</a> »</div>
       </div>
     </div>
 </div>
@@ -133,7 +133,7 @@
         <div style="color:rgba(255, 255, 255, 0.40);">Ore: +<span id="oreprdo">0</span> / Day</div>
         <div style="color:rgba(255, 255, 255, 0.40);">Copper: +<span id="copperprdo">0</span> / Day</div>
         <div style="color:rgba(255, 255, 255, 0.40);">Uranium: +<span id="uraniumprdo">0</span> / Day</div>
-        <div style="margin:10px 0 4px 0;"><a href="/production">Production</a> »</div>
+        <div style="margin:10px 0 4px 0;"><a href="production.php">Production</a> »</div>
       </div>
     </div>
 </div>
@@ -147,7 +147,7 @@
         <div style="color:rgba(255, 255, 255, 0.40);">Total sold: <span class="stardust" id="tsold">0 Stardust</span></div>
         <div style="color:rgba(255, 255, 255, 0.40);">Total burned: <span class="stardust" id="tburned">0 Stardust</span></div>
         <div style="color:rgba(255, 255, 255, 0.40);">Highest sale: <span class="stardust" id="hsell">0 Stardust</span> <a class="tooltips steem-keychain-checked" href="" style="text-decoration:none;font-size:11px;"><img src="img/icons/info.png" width="14px" height="14px" style="margin:-3px 0 0 4px;"><span id="hinfo"><b>Highest sale</b><br>Category: none<br>Price: 0 SD<br>Seller: none</span></a></div>
-        <div style="margin:10px 0 4px 0;"><a href="market" class="steem-keychain-checked">Market</a> »</div>
+        <div style="margin:10px 0 4px 0;"><a href="market.php" class="steem-keychain-checked">Market</a> »</div>
       </div>
     </div>
 </div>
@@ -158,7 +158,7 @@
         <div style="font-size:20px;">Activity</div>
         <div style="border-bottom: 1px solid rgba(255, 255, 255, 0.20);margin:6px 0 6px 0;"></div>
         <div style="color:rgba(255, 255, 255, 0.40);">Inspect all transactions, we and every single player are doing on the Steem blockchain. Everything is comprehensible for everyone and easy to be inspected.</div>
-        <div style="margin:10px 0 4px 0;"><a href="activity" class="steem-keychain-checked">Activity</a> <img src="img/icons/link.png" style="width:14px;margin:-2px 0 0 0;"></div>
+        <div style="margin:10px 0 4px 0;"><a href="activity.php" class="steem-keychain-checked">Activity</a> <img src="img/icons/link.png" style="width:14px;margin:-2px 0 0 0;"></div>
       </div>
     </div>
 </div>
@@ -203,13 +203,13 @@
 <!--
 <div class="alert alert-info alert-dismissible" style="background-color:rgba(255, 255, 255, 0.03);border-color:rgba(255, 255, 255, 0.08);color:#fff; margin: 0 0 10px 0; padding:10px 35px 10px 10px;">
   <button type="button" class="close" data-dismiss="alert" aria-label="Schließen"><span aria-hidden="true" style="text-shadow: 0 0px 0 #fff;">&times;</span></button>
-  <span style="color:#5CB85C;">Planet</span> found! Common Atmosphere on position [-157/-238]. <a href="galaxy">Galaxy</a> »
-  <span class="stardust">243 Stardust</span> found on exploration to [-157/-238]. <a href="wallet">Wallet</a> »
+  <span style="color:#5CB85C;">Planet</span> found! Common Atmosphere on position [-157/-238]. <a href="galaxy.php">Galaxy</a> »
+  <span class="stardust">243 Stardust</span> found on exploration to [-157/-238]. <a href="wallet.php">Wallet</a> »
 </div>
 
 <div class="alert alert-info alert-dismissible" style="background-color:rgba(255, 255, 255, 0.03);border-color:rgba(255, 255, 255, 0.08);color:#fff; margin: 0 0 10px 0; padding:10px 35px 10px 10px;">
   <button type="button" class="close" data-dismiss="alert" aria-label="Schließen"><span aria-hidden="true" style="text-shadow: 0 0px 0 #fff;">&times;</span></button>
-  <span style="color:#add8e6;">Corvette Najtar Blueprint</span> found on exploration to [-157/-238]. <a href="items">Items</a> »
+  <span style="color:#add8e6;">Corvette Najtar Blueprint</span> found on exploration to [-157/-238]. <a href="items.php">Items</a> »
 </div>-->
 </div>
 <!-- /notifications end -->
@@ -224,7 +224,7 @@
 
 <p>After years of searching, a small group was able to identify some areas that were not radioactively contaminated. In 2080, the rest of the people in these areas tried to create a new livelihood. The radioactive fallout made life impossible. The great war and its devastating destruction of our home planet forced people to flee. Mankind was forced to leave the earth.</p>
     
-<p>On different parts of the earth, different factions came together to build space ships under high pressure in order to bring as many people as possible into space and to saving a part of humanity. After a flight of several months through the undiscovered depths of space, you have finally discovered a planet. Planet Alpha. Read more about the <a href="story">story</a> or start with the <a target="_blank" href="https://guide.nextcolony.io/tutorial">tutorial</a>.</p>
+<p>On different parts of the earth, different factions came together to build space ships under high pressure in order to bring as many people as possible into space and to saving a part of humanity. After a flight of several months through the undiscovered depths of space, you have finally discovered a planet. Planet Alpha. Read more about the <a href="story.php">story</a> or start with the <a target="_blank" href="https://guide.nextcolony.io/tutorial">tutorial</a>.</p>
 
 <div style="text-align: right;margin:30px 0 0 0;position:relative;top:52px;left:0px;"><img src="img/char/char8.png" width="120px" style="margin:-70px 0 0 0;"></div>
 <div style="color:rgba(255, 255, 255, 0.30);margin:30px 0 3px 0;">Logbook: Rewards</div>
@@ -238,7 +238,7 @@
 <div style="text-align: right;margin:30px 0 0 0;position:relative;top:52px;left:0px;"><img src="img/char/char6.png" width="120px" style="margin:-70px 0 0 0;"></div>
 <div style="color:rgba(255, 255, 255, 0.30);margin:30px 0 3px 0;">Logbook: Seasons</div>
 <div style="border-bottom: 1px solid rgba(255, 255, 255, 0.20);margin:0 0 20px 0;"></div>
-<p>To participate in the monthly <a href="season" class="steem-keychain-checked">season</a>, you need the tremendous battleship Yamato. You have the chance to earn reward points by upgrading and defending your Yamato or by attacking Yamato's of your enemies. Your reward points are converted into Steem, Items, and Stardust at the end of each season. If you have a Yamato blueprint, you can build a Yamato T-00. If you don't have a Yamato blueprint, you can buy one at the <a href="market" class="steem-keychain-checked">market</a> or buy and upgrade an already built Yamato T-00 (you don't need a Yamato blueprint for this). If you want to hunt Yamatos to earn reward points, you need to know where the Yamatos are and if they are currently in an upgrading process. For this, you can use <a href="activity">activity</a>.</p>
+<p>To participate in the monthly <a href="season.php" class="steem-keychain-checked">season</a>, you need the tremendous battleship Yamato. You have the chance to earn reward points by upgrading and defending your Yamato or by attacking Yamato's of your enemies. Your reward points are converted into Steem, Items, and Stardust at the end of each season. If you have a Yamato blueprint, you can build a Yamato T-00. If you don't have a Yamato blueprint, you can buy one at the <a href="market.php" class="steem-keychain-checked">market</a> or buy and upgrade an already built Yamato T-00 (you don't need a Yamato blueprint for this). If you want to hunt Yamatos to earn reward points, you need to know where the Yamatos are and if they are currently in an upgrading process. For this, you can use <a href="activity.php">activity</a>.</p>
 <p>A fully upgraded Yamato at level 20 is a monster of a ship – a true wonder of the universe. However, to get there, you will need to spend a lot of Stardust and other resources. So chose wisely, if it is better to upgrade many Yamatos to a lower Tier or just one to a high Tier – both strategies might be successful.</p>
 
 

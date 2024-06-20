@@ -32,8 +32,8 @@
             <span class="caret"></span>
             </a>
             <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="activitynav">
-              <li><a href="activity">Activity</a></li>
-              <li><a href="battlefeed">Recent Battles</a></li>
+              <li><a href="activity.php">Activity</a></li>
+              <li><a href="battlefeed.php">Recent Battles</a></li>
             </ul>
           </div>
           </div>
