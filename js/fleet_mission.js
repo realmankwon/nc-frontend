@@ -725,7 +725,7 @@ function LoadGalaxyA(x, y) {
   var cordx = parseInt(x);
   var cordy = parseInt(y);
 
-  window.location.href = "/galaxy?x=" + cordx + "&y=" + cordy;
+  window.location.href = "/galaxy.php?x=" + cordx + "&y=" + cordy;
 }
 
 function activeMission(callback) {

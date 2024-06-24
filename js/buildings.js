@@ -36,7 +36,7 @@ var researchlevel;
 function GetBuildingDiv() {
   $.ajax({
     type: "GET",
-    url: "include/building_div",
+    url: "./include/building_div.html",
     async: false,
     success: function (html) {
       building_div = html;
@@ -48,7 +48,7 @@ function GetBuildingDiv() {
 function GetShildDiv() {
   $.ajax({
     type: "GET",
-    url: "include/building_shield_div",
+    url: "./include/building_shield_div.html",
     async: false,
     success: function (html) {
       shield_div = html;
@@ -144,6 +144,7 @@ function RenderBuildings() {
         cur_obj = building;
       }
     });
+
     if (cur_obj) {
       var level = parseInt(cur_obj.current);
       var time = msToHMS(cur_obj.time * 1000);

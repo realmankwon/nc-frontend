@@ -198,12 +198,12 @@ function RenderGalaxyBlock(x, y, arr) {
     if (arr[0].x == 0 && arr[0].y == 0) {
       $("#pos_" + x + "_" + y).css(
         "background-image",
-        "url(https://nextcolony.io/img/planets/earth.png)"
+        "url(./img/planets/earth.png)"
       );
     } else {
       $("#pos_" + x + "_" + y).css(
         "background-image",
-        "url(https://nextcolony.io/img/planets/" + arr[0].img + ")"
+        "url(./img/planets/" + arr[0].img + ")"
       );
     }
 
@@ -883,9 +883,9 @@ function replaceAll(str, find, replace) {
 
 setInterval(function () {
   if (currentPlanetId != planetid) {
-    window.location.href = "/galaxy";
     StartGalaxy();
     LoadFleetGalaxy();
+    // window.location.href = "/galaxy.php";
   }
 }, 1000);
 

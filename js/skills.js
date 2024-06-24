@@ -73,7 +73,7 @@ var MaxLevelTotal = 5;
 function GetSkillDiv() {
   $.ajax({
     type: "GET",
-    url: "include/skills_div",
+    url: "./include/skills_div.html",
     async: false,
     success: function (html) {
       skill_div = html;
@@ -290,7 +290,7 @@ function SetSkill(skill) {
     scJson["tr_var2"] = planetid;
     scJson["tr_var3"] = skill;
 
-    api.setAccessToken(access);
+    // api.setAccessToken(access);
 
     $("#" + skill).text("Enhance...");
 

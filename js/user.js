@@ -4,7 +4,7 @@ var username = getCookie("user");
 
 function NotLoggedIn() {
   console.log(window.location.pathname);
-  if (window.location.pathname == "/galaxy") {
+  if (window.location.pathname == "/galaxy.php") {
     $("#navbar").attr("style", "display: none !important");
     $(function () {
       $("#planetselectg").html("");

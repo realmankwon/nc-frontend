@@ -37,6 +37,10 @@ function GetQyt(callback = null) {
       copperqyt = json.copper;
       uraniumqyt = json.uranium;
 
+      console.log(
+        `ore: ${oreqyt}, coal: ${coalqyt}, copper: ${copperqyt}, uranium: ${uraniumqyt}`
+      );
+
       orerate = json.orerate;
       coalrate = json.coalrate;
       copperrate = json.copperrate;
@@ -258,44 +262,36 @@ function SetQyt(callback = null) {
     //Set Qyt in Header
     document.getElementById("qyt_ore").innerHTML =
       oreqytu +
-        " Fe" +
-        '<span style="text-shadow:none;"><b>Ore</b> (Resource)<br>+' +
-        typeof oreprd ===
-      "undefined"
-        ? oreprd.production.toFixed(2)
-        : 0 + " Fe / day<br>Capacity: " + typeof oreprd === "undefined"
-        ? oreprd.depot.toFixed(2)
-        : 0 + " Fe</span>";
+      " Fe" +
+      '<span style="text-shadow:none;"><b>Ore</b> (Resource)<br>+' +
+      oreprd.production.toFixed(2) +
+      " Fe / day<br>Capacity: " +
+      oreprd.depot.toFixed(2) +
+      " Fe</span>";
     document.getElementById("qyt_coal").innerHTML =
       coalqytu +
-        " C" +
-        '<span style="text-shadow:none;"><b>Coal</b> (Resource)<br>+' +
-        typeof coalprd ===
-      "undefined"
-        ? coalprd.production.toFixed(2)
-        : 0 + " C / day<br>Capacity: " + typeof coalprd === "undefined"
-        ? coalprd.depot.toFixed(2)
-        : 0 + " C</span>";
+      " C" +
+      '<span style="text-shadow:none;"><b>Coal</b> (Resource)<br>+' +
+      coalprd.production.toFixed(2) +
+      " C / day<br>Capacity: " +
+      coalprd.depot.toFixed(2) +
+      " C</span>";
     document.getElementById("qyt_copper").innerHTML =
       copperqytu +
-        " Cu" +
-        '<span style="text-shadow:none;"><b>Copper</b> (Resource)<br>+' +
-        typeof copperprd ===
-      "undefined"
-        ? copperprd.production.toFixed(2)
-        : 0 + " Cu / day<br>Capacity: " + typeof copperprd === "undefined"
-        ? copperprd.depot.toFixed(2)
-        : 0 + " Cu</span>";
+      " Cu" +
+      '<span style="text-shadow:none;"><b>Copper</b> (Resource)<br>+' +
+      copperprd.production.toFixed(2) +
+      " Cu / day<br>Capacity: " +
+      copperprd.depot.toFixed(2) +
+      " Cu</span>";
     document.getElementById("qyt_uranium").innerHTML =
-      uraniumprd +
-        " U" +
-        '<span style="text-shadow:none;"><b>Uranium</b> (Resource)<br>+' +
-        typeof uraniumprd ===
-      "undefined"
-        ? uraniumprd.production.toFixed(2)
-        : 0 + " U / day<br>Capacity: " + typeof uraniumprd === "undefined"
-        ? uraniumprd.depot.toFixed(2)
-        : 0 + " U</span>";
+      uraniumqytu +
+      " U" +
+      '<span style="text-shadow:none;"><b>Uranium</b> (Resource)<br>+' +
+      uraniumprd.production.toFixed(2) +
+      " U / day<br>Capacity: " +
+      uraniumprd.depot.toFixed(2) +
+      " U</span>";
   });
 
   if (callback) {

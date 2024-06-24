@@ -41,7 +41,7 @@ function NewUpgrade(name) {
         scJson["tr_var1"] = planetid.toString();
         scJson["tr_var2"] = name;
 
-        api.setAccessToken(access);
+        // api.setAccessToken(access);
         CustomJsonHandler(scJson, function (err, res) {
           if (res) {
             console.log("Phase 2: Send Custom Json");

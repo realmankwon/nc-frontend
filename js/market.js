@@ -12,7 +12,7 @@ var boughtmarket = [];
 function loadMarketDiv() {
   $.ajax({
     type: "GET",
-    url: "include/market_div",
+    url: "./include/market_div.html",
     async: false,
     success: function (html) {
       market_div = html;
@@ -254,7 +254,7 @@ function RenderHistory(dataarray) {
     if (data.cords_hor != null && data.cords_ver) {
       location = data.cords_hor + "/" + data.cords_ver;
       location =
-        '<a href="/galaxy?x=' +
+        '<a href="/galaxy.php?x=' +
         data.cords_hor +
         "&y=" +
         data.cords_ver +

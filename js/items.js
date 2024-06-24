@@ -48,7 +48,7 @@ var item_order = [
 function GetItemDiv() {
   $.ajax({
     type: "GET",
-    url: "include/item_div",
+    url: "./include/item_div.html",
     async: false,
     success: function (html) {
       item_div = html;

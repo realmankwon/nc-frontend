@@ -70,7 +70,7 @@ var yamatospawned = false;
 function GetshipDiv() {
   $.ajax({
     type: "GET",
-    url: "include/shipyard_div",
+    url: "./include/shipyard_div.html",
     async: false,
     success: function (html) {
       ship_div = html;
