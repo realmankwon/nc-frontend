@@ -35,11 +35,11 @@ function pickApiServer() {
   ) {
     jarunikServer = "http://nc-client-test.jarunik.com";
     // apiServer = "http://140.82.34.132/api"
-    apiServer = "http://localhost:5000";
+    apiServer = "http://localhost:5001";
   } else {
     jarunikServer = "https://nc-client.jarunik.com";
     // apiServer = 'https://api.nextcolony.io'
-    apiServer = "http://localhost:5000";
+    apiServer = "http://localhost:5001";
   }
 }
 
@@ -62,6 +62,25 @@ if (debug) {
 function setCookie(c_name, c_value) {
   document.cookie =
     c_name + "=" + c_value + "; expires=Thu, 01 Jan 2970 00:00:00 UTC;";
+}
+
+function generateUUID() {
+  // Public Domain/MIT
+  var d = new Date().getTime(); //Timestamp
+  var d2 = (performance && performance.now && performance.now() * 1000) || 0; //Time in microseconds since page-load or 0 if unsupported
+  return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
+    var r = Math.random() * 16; //random number between 0 and 16
+    if (d > 0) {
+      //Use timestamp until depleted
+      r = (d + r) % 16 | 0;
+      d = Math.floor(d / 16);
+    } else {
+      //Use microseconds since page-load if supported
+      r = (d2 + r) % 16 | 0;
+      d2 = Math.floor(d2 / 16);
+    }
+    return (c === "x" ? r : (r & 0x3) | 0x8).toString(16);
+  });
 }
 
 function formatNumber(num) {
@@ -325,27 +344,46 @@ function MakeAPhonecall(
   }, 3000);
 }
 
-function CustomJsonHandler(account, id, json, cb) {
+function CustomJsonHandler(json, cb) {
   if (!planetid) {
     var planetid = 0;
   }
   var lap = planetid;
-  api.customJson([], [account], id, json, function (err, res) {
-    if (lap == planetid) {
-      if (err && err.cause && err.cause.data && err.cause.data.stack[0]) {
-        if (err.cause.data.stack[0].context.file == "rc_plugin.cpp") {
-          alert("Out of resource credits, please buy Steem and power up.");
-        }
-      }
-      cb(err, res);
-    }
+  var url = apiServer + "/sendCommand";
+  var trxId = generateUUID();
+  json["trxId"] = trxId;
+  console.log(json);
+  $.ajax({
+    url: url,
+    type: "POST",
+    contentType: "application/json",
+    data: JSON.stringify(json),
+    success: function (data) {
+      console.log(data);
+      cb(data);
+    },
+    error: function (xhr, status, error) {
+      console.error("Error:", error);
+      cb(error);
+      // 오류 발생 시 처리
+    },
   });
+  //   api.customJson([], [account], id, json, function (err, res) {
+  //     if (lap == planetid) {
+  //       if (err && err.cause && err.cause.data && err.cause.data.stack[0]) {
+  //         if (err.cause.data.stack[0].context.file == "rc_plugin.cpp") {
+  //           alert("Out of resource credits, please buy Steem and power up.");
+  //         }
+  //       }
+  //       cb(err, res);
+  //     }
+  //   });
 }
 
 function CheckTransactions(json, block, callback) {
   var rjson = {};
   rjson["limit"] = 2;
-  rjson["type"] = json.type;
+  rjson["tr_type"] = json.type;
   rjson["user"] = username;
   var url = apiServer + "/transactions";
   var ticker = 0;

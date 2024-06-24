@@ -22,7 +22,7 @@
 	  
       <div class="page-header">
 
-<h2><a href="/planets"><b>All Planets</b></a> / <a href="/myplanets">My Planets</a></h2>
+<h2><a href="/planets"><b>All Planets</b></a> / <a href="/myplanets.php">My Planets</a></h2>
 
 <!-- All Planet Filter -->
 <?php include "include/nav_planetfilter.html" ?>

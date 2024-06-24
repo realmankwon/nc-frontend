@@ -83,21 +83,17 @@ function ModalGiftBtn(user) {
 function SendGift(id, user) {
   if (id != "" && user != "") {
     var scJson = {};
-    var scCmd = {};
     scJson["username"] = username;
-    scJson["type"] = gifttype;
-    scCmd["tr_var1"] = id;
-    scCmd["tr_var2"] = replaceAll(user, " ", "");
-    scJson["command"] = scCmd;
+    scJson["tr_type"] = gifttype;
+    scJson["tr_var1"] = id;
+    scJson["tr_var2"] = replaceAll(user, " ", "");
 
-    api.setAccessToken(access);
-    var njson = JSON.stringify(scJson);
     SendGiftJson(njson);
   }
 }
 
 function SendGiftJson(json) {
-  CustomJsonHandler(username, sc2app, json, function (err, res) {
+  CustomJsonHandler(json, function (err, res) {
     if (res) {
       giftButtonPressed = false;
       if (gifttype == "giftitem") {

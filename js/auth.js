@@ -65,36 +65,38 @@ function RegKeychain() {
   $("#likc").html('<img src="img/loading.gif" height="15px" />');
 
   var scJson = {};
-  var scCmd = {};
   scJson["username"] = username;
-  scJson["type"] = "newuser";
-  scCmd["tr_var1"] = username;
-  scJson["command"] = scCmd;
+  scJson["tr_type"] = "newuser";
+  scJson["tr_var1"] = username;
 
-  var njson = JSON.stringify(scJson);
-  console.log(njson);
-
-  var json = {};
-  json["user"] = username;
-  MakeAPhonecall(
-    apiServer + "/loaduser",
-    json,
-    [],
-    function (err, res) {
-      if (res) {
-        document.cookie = "planetid=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
-        document.cookie =
-          "access=" + access + "; expires=Thu, 01 Jan 2970 00:00:00 UTC;";
-        document.cookie =
-          "user=" + username + "; expires=Thu, 01 Jan 2970 00:00:00 UTC;";
-        loginSuccess();
-      } else {
-        $("#likc").attr("disabled", false);
-        $("#likc").html("Registration/Login");
-      }
-    },
-    "GET"
-  );
+  console.log(scJson);
+  CustomJsonHandler(scJson, function (err, res) {
+    if (res) {
+      console.log(err, res);
+      var json = {};
+      json["user"] = username;
+      MakeAPhonecall(
+        apiServer + "/loaduser",
+        json,
+        [],
+        function (err, res) {
+          if (res) {
+            document.cookie =
+              "planetid=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+            document.cookie =
+              "access=" + access + "; expires=Thu, 01 Jan 2970 00:00:00 UTC;";
+            document.cookie =
+              "user=" + username + "; expires=Thu, 01 Jan 2970 00:00:00 UTC;";
+            loginSuccess();
+          } else {
+            $("#likc").attr("disabled", false);
+            $("#likc").html("Registration/Login");
+          }
+        },
+        "GET"
+      );
+    }
+  });
 }
 
 function LoginModal() {

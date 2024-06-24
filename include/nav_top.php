@@ -37,7 +37,7 @@
                 <li><a href="fleet.php">Fleet</a></li>
                 <li><a href="fleet_missions.php">Missions</a></li>
                 <li><a href="galaxy.php">Galaxy</a></li>
-                <li><a href="production">Production</a></li>
+                <li><a href="production.php">Production</a></li>
                 </ul>
             </li>
 

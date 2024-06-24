@@ -320,14 +320,10 @@ function Burn(id) {
   var scJson = {};
   var scCmd = {};
   scJson["username"] = username;
-  scJson["type"] = "burn";
-  scCmd["tr_var1"] = id.toString();
-  scJson["command"] = scCmd;
+  scJson["tr_type"] = "burn";
+  scJson["tr_var1"] = id.toString();
 
-  api.setAccessToken(access);
-  var njson = JSON.stringify(scJson);
-
-  CustomJsonHandler(username, sc2app, njson, function (res, err) {
+  CustomJsonHandler(scJson, function (res, err) {
     isBurning = true;
     console.log(res, err);
     var njson = {};
@@ -393,17 +389,13 @@ function SellPlanet(id) {
   var scJson = {};
   var scCmd = {};
   scJson["username"] = username;
-  scJson["type"] = "ask";
-  scCmd["tr_var1"] = "planet";
-  scCmd["tr_var2"] = id.toString();
-  scCmd["tr_var3"] = parseFloat($("#sellsd").val());
-  scCmd["tr_var4"] = "nextcolony";
-  scJson["command"] = scCmd;
+  scJson["tr_type"] = "ask";
+  scJson["tr_var1"] = "planet";
+  scJson["tr_var2"] = id.toString();
+  scJson["tr_var3"] = parseFloat($("#sellsd").val());
+  scJson["tr_var4"] = "nextcolony";
 
-  api.setAccessToken(access);
-  var njson = JSON.stringify(scJson);
-
-  CustomJsonHandler(username, sc2app, njson, function (res, err) {
+  CustomJsonHandler(scJson, function (res, err) {
     isSelling = true;
     console.log(res, err);
     var njson = {};
@@ -460,14 +452,10 @@ function Respawn(id) {
   var scJson = {};
   var scCmd = {};
   scJson["username"] = username;
-  scJson["type"] = "respawn";
-  scCmd["tr_var1"] = id.toString();
-  scJson["command"] = scCmd;
+  scJson["tr_type"] = "respawn";
+  scJson["tr_var1"] = id.toString();
 
-  api.setAccessToken(access);
-  var njson = JSON.stringify(scJson);
-
-  CustomJsonHandler(username, sc2app, njson, function (res, err) {
+  CustomJsonHandler(scJson, function (res, err) {
     isRespawning = true;
     console.log(res, err);
     var njson = {};
@@ -565,18 +553,14 @@ function RenamePlanet() {
   var scJson = {};
   var scCmd = {};
   scJson["username"] = username;
-  scJson["type"] = "renameplanet";
-  scCmd["tr_var1"] = showcaseID.toString();
-  scCmd["tr_var2"] = TypedPlanetName;
-  scJson["command"] = scCmd;
+  scJson["tr_type"] = "renameplanet";
+  scJson["tr_var1"] = showcaseID.toString();
+  scJson["tr_var2"] = TypedPlanetName;
 
   if (TypedPlanetName == "" || !regex.test(TypedPlanetName)) {
     return;
   }
   ischangingname = true;
-
-  api.setAccessToken(access);
-  var njson = JSON.stringify(scJson);
 
   $("#renamebtn").prop("disabled", true);
   if (path == "overview") {
@@ -585,7 +569,7 @@ function RenamePlanet() {
     $("#renamebtn").html('<img src="../img/loading.gif" height="15px" />');
   }
 
-  CustomJsonHandler(username, sc2app, njson, function (res, err) {
+  CustomJsonHandler(scJson, function (res, err) {
     console.log(res, err);
     var njson = {};
     njson["id"] = showcaseID;

@@ -681,13 +681,10 @@ function Yamato() {
                                   $("#tierbtn").attr("disabled", true);
 
                                   var scJson = {};
-                                  var scCmd = {};
                                   scJson["username"] = username;
-                                  scJson["type"] = "upgradeyamato";
-                                  scCmd["tr_var1"] = planetid;
-                                  scCmd["tr_var2"] = val;
-                                  scJson["command"] = scCmd;
-                                  var njson = JSON.stringify(scJson);
+                                  scJson["tr_type"] = "upgradeyamato";
+                                  scJson["tr_var1"] = planetid;
+                                  scJson["tr_var2"] = val;
                                   CustomJsonHandler(
                                     username,
                                     sc2app,
@@ -786,21 +783,16 @@ function BuildShip(name) {
   console.log("Make Upgrade");
   if (name != "" && !isUpgrading) {
     var scJson = {};
-    var scCmd = {};
     scJson["username"] = username;
-    scJson["type"] = "buildship";
-    scCmd["tr_var1"] = planetid.toString();
-    scCmd["tr_var2"] = name;
-    scJson["command"] = scCmd;
-
-    api.setAccessToken(access);
-    var njson = JSON.stringify(scJson);
+    scJson["tr_type"] = "buildship";
+    scJson["tr_var1"] = planetid.toString();
+    scJson["tr_var2"] = name;
 
     $("#" + name + "btn").html('<img src="img/loading.gif" height="15px" />');
     $("#" + name + "btn").prop("disabled", true);
 
     isUpgrading = true;
-    CustomJsonHandler(username, sc2app, njson, function (res, err) {
+    CustomJsonHandler(scJson, function (res, err) {
       isUpgrading = true;
       AwaitChangeships();
       console.log(res, err);

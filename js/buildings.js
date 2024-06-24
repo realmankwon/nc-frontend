@@ -760,26 +760,21 @@ function Upgrade(name) {
   console.log(name, isUpgrading);
   if (name != "" && !isUpgrading) {
     var scJson = {};
-    var scCmd = {};
     scJson["username"] = username;
-    scJson["type"] = "upgrade";
-    scCmd["tr_var1"] = planetid.toString();
-    scCmd["tr_var2"] = name;
-    scJson["command"] = scCmd;
+    scJson["tr_type"] = "upgrade";
+    scJson["tr_var1"] = planetid.toString();
+    scJson["tr_var2"] = name;
 
     // api.setAccessToken(access);
-    var njson = JSON.stringify(scJson);
 
     $("#" + name + "btn").html('<img src="img/loading.gif" height="15px" />');
     $("#" + name + "btn").prop("disabled", true);
 
-    isUpgrading = true;
-    AwaitChangeBuildings();
-    // CustomJsonHandler(username,sc2app,njson,function(res,err){
-    //     //isUpgrading[planetid] = true;
-    //     AwaitChangeBuildings()
-    //     console.log(res,err);
-    // });
+    CustomJsonHandler(scJson, function (res, err) {
+      //isUpgrading[planetid] = true;
+      AwaitChangeBuildings();
+      console.log(res, err);
+    });
   }
 }
 
@@ -787,28 +782,21 @@ function Charge(name) {
   console.log("Make Charge");
   if (name != "" && !isCharging) {
     var scJson = {};
-    var scCmd = {};
     scJson["username"] = username;
-    scJson["type"] = "charge";
-    scCmd["tr_var1"] = planetid.toString();
-    scCmd["tr_var2"] = name;
-    scJson["command"] = scCmd;
-
-    api.setAccessToken(access);
-    var njson = JSON.stringify(scJson);
+    scJson["tr_type"] = "charge";
+    scJson["tr_var1"] = planetid.toString();
+    scJson["tr_var2"] = name;
 
     $("#" + name + "chargebtn").html(
       '<img src="img/loading.gif" height="15px" />'
     );
     $("#" + name + "chargebtn").prop("disabled", true);
 
-    isCharging = true;
-    AwaitChangeBuildings();
-    // CustomJsonHandler(username, sc2app, njson, function (res, err) {
-    //   isCharging = true;
-    //   AwaitChangeBuildings();
-    //   console.log(res, err);
-    // });
+    CustomJsonHandler(scJson, function (res, err) {
+      isCharging = true;
+      AwaitChangeBuildings();
+      console.log(res, err);
+    });
   }
 }
 
@@ -816,28 +804,23 @@ function Enable(name) {
   console.log("Make Charge");
   if (name != "" && !isEnabling) {
     var scJson = {};
-    var scCmd = {};
     scJson["username"] = username;
-    scJson["type"] = "enable";
-    scCmd["tr_var1"] = planetid.toString();
-    scCmd["tr_var2"] = name;
-    scJson["command"] = scCmd;
+    scJson["tr_type"] = "enable";
+    scJson["tr_var1"] = planetid.toString();
+    scJson["tr_var2"] = name;
 
     // api.setAccessToken(access);
-    var njson = JSON.stringify(scJson);
 
     $("#" + name + "protectionbtn").html(
       '<img src="img/loading.gif" height="15px" />'
     );
     $("#" + name + "protectionbtn").prop("disabled", true);
 
-    isEnabling = true;
-    AwaitChangeBuildings();
-    // CustomJsonHandler(username, sc2app, njson, function (res, err) {
-    //   isEnabling = true;
-    //   AwaitChangeBuildings();
-    //   console.log(res, err);
-    // });
+    CustomJsonHandler(scJson, function (res, err) {
+      isEnabling = true;
+      AwaitChangeBuildings();
+      console.log(res, err);
+    });
   }
 }
 

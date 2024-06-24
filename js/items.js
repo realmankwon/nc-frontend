@@ -305,17 +305,13 @@ function SellItem(id) {
   var scJson = {};
   var scCmd = {};
   scJson["username"] = username;
-  scJson["type"] = "ask";
-  scCmd["tr_var1"] = "item";
-  scCmd["tr_var2"] = id.toString();
-  scCmd["tr_var3"] = parseFloat($("#sellitemsd").val());
-  scCmd["tr_var4"] = "nextcolony";
-  scJson["command"] = scCmd;
+  scJson["tr_type"] = "ask";
+  scJson["tr_var1"] = "item";
+  scJson["tr_var2"] = id.toString();
+  scJson["tr_var3"] = parseFloat($("#sellitemsd").val());
+  scJson["tr_var4"] = "nextcolony";
 
-  api.setAccessToken(access);
-  var njson = JSON.stringify(scJson);
-
-  CustomJsonHandler(username, sc2app, njson, function (res, err) {
+  CustomJsonHandler(scJson, function (res, err) {
     isSelling = true;
     console.log(res, err);
     var njson = {};
@@ -424,15 +420,12 @@ function ActivateItem() {
   var scJson = {};
   var scCmd = {};
   scJson["username"] = username;
-  scJson["type"] = "activate";
-  scCmd["tr_var1"] = uid;
-  scCmd["tr_var2"] = sel_name;
-  scJson["command"] = scCmd;
+  scJson["tr_type"] = "activate";
+  scJson["tr_var1"] = uid;
+  scJson["tr_var2"] = sel_name;
 
-  api.setAccessToken(access);
-  var njson = JSON.stringify(scJson);
   if (sel_name != "") {
-    CustomJsonHandler(username, sc2app, njson, function (res, err) {
+    CustomJsonHandler(scJson, function (res, err) {
       SetQytCalculating(false);
       old_data = new_data;
       item_ticker = true;
@@ -454,15 +447,12 @@ function MergeItem() {
   var scJson = {};
   var scCmd = {};
   scJson["username"] = username;
-  scJson["type"] = "activate";
-  scCmd["tr_var1"] = uid;
-  scCmd["tr_var2"] = sel_name;
-  scJson["command"] = scCmd;
+  scJson["tr_type"] = "activate";
+  scJson["tr_var1"] = uid;
+  scJson["tr_var2"] = sel_name;
 
-  api.setAccessToken(access);
-  var njson = JSON.stringify(scJson);
   if (sel_name != "") {
-    CustomJsonHandler(username, sc2app, njson, function (res, err) {
+    CustomJsonHandler(scJson, function (res, err) {
       SetQytCalculating(false);
       old_data = new_data;
       item_ticker = true;

@@ -884,35 +884,35 @@ function StartMission() {
   scJson["username"] = username;
   //EXPLORE
   if (FirstChoice == "explore") {
-    scJson["type"] = "explorespace";
-    scCmd["tr_var1"] = planetid;
-    scCmd["tr_var2"] = posx;
-    scCmd["tr_var3"] = posy;
-    scCmd["tr_var4"] = LastSelectedShipName;
+    scJson["tr_type"] = "explorespace";
+    scJson["tr_var1"] = planetid;
+    scJson["tr_var2"] = posx;
+    scJson["tr_var3"] = posy;
+    scJson["tr_var4"] = LastSelectedShipName;
   }
   //TRANSPORT
   if (FirstChoice == "transport") {
-    scJson["type"] = "transport";
-    scCmd["tr_var1"] = SelectedShips;
-    scCmd["tr_var2"] = planetid;
-    scCmd["tr_var3"] = posx;
-    scCmd["tr_var4"] = posy;
-    scCmd["tr_var5"] = coalfleet;
-    scCmd["tr_var6"] = orefleet;
-    scCmd["tr_var7"] = copperfleet;
-    scCmd["tr_var8"] = uraniumfleet;
+    scJson["tr_type"] = "transport";
+    scJson["tr_var1"] = SelectedShips;
+    scJson["tr_var2"] = planetid;
+    scJson["tr_var3"] = posx;
+    scJson["tr_var4"] = posy;
+    scJson["tr_var5"] = coalfleet;
+    scJson["tr_var6"] = orefleet;
+    scJson["tr_var7"] = copperfleet;
+    scJson["tr_var8"] = uraniumfleet;
   }
   //DEPLOY
   if (FirstChoice == "deploy") {
-    scJson["type"] = "deploy";
-    scCmd["tr_var1"] = SelectedShips;
-    scCmd["tr_var2"] = posx;
-    scCmd["tr_var3"] = posy;
-    scCmd["tr_var4"] = coalfleet;
-    scCmd["tr_var5"] = orefleet;
-    scCmd["tr_var6"] = copperfleet;
-    scCmd["tr_var7"] = uraniumfleet;
-    scCmd["tr_var8"] = planetid;
+    scJson["tr_type"] = "deploy";
+    scJson["tr_var1"] = SelectedShips;
+    scJson["tr_var2"] = posx;
+    scJson["tr_var3"] = posy;
+    scJson["tr_var4"] = coalfleet;
+    scJson["tr_var5"] = orefleet;
+    scJson["tr_var6"] = copperfleet;
+    scJson["tr_var7"] = uraniumfleet;
+    scJson["tr_var8"] = planetid;
   }
   //ATTACK
   if (
@@ -921,17 +921,12 @@ function StartMission() {
     FirstChoice == "siege" ||
     FirstChoice == "breaksiege"
   ) {
-    scJson["type"] = FirstChoice;
-    scCmd["tr_var1"] = formationsJSON;
-    scCmd["tr_var2"] = posx;
-    scCmd["tr_var3"] = posy;
-    scCmd["tr_var4"] = planetid;
+    scJson["tr_type"] = FirstChoice;
+    scJson["tr_var1"] = formationsJSON;
+    scJson["tr_var2"] = posx;
+    scJson["tr_var3"] = posy;
+    scJson["tr_var4"] = planetid;
   }
-
-  scJson["command"] = scCmd;
-
-  api.setAccessToken(access);
-  var njson = JSON.stringify(scJson);
 
   var btnid = "";
   if (!undersiege) {
@@ -955,7 +950,7 @@ function StartMission() {
   //console.log(scJson);
 
   CheckTransactions(scJson);
-  CustomJsonHandler(username, sc2app, njson, function (err, cujs) {
+  CustomJsonHandler(scJson, function (err, cujs) {
     var cu_js = cujs;
     console.log(cujs, err);
     MakeAPhonecall(
