@@ -35,11 +35,11 @@ function pickApiServer() {
   ) {
     jarunikServer = "http://nc-client-test.jarunik.com";
     // apiServer = "http://140.82.34.132/api"
-    apiServer = "http://localhost:5001";
+    apiServer = "https://nc-api.viaweb3.xyz";
   } else {
     jarunikServer = "https://nc-client.jarunik.com";
     // apiServer = 'https://api.nextcolony.io'
-    apiServer = "http://localhost:5001";
+    apiServer = "https://nc-api.viaweb3.xyz";
   }
 }
 
@@ -350,8 +350,8 @@ function CustomJsonHandler(json, cb) {
   }
   var lap = planetid;
   var url = apiServer + "/sendCommand";
-  var trxId = generateUUID();
-  json["trxId"] = trxId;
+  var trx = generateUUID();
+  json["trx"] = trx;
   console.log(json);
   $.ajax({
     url: url,

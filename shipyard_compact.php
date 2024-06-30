@@ -22,7 +22,7 @@
 
 
     <div class="page-header">
-      <h2><a href="shipyard.php">Shipyard</a> / <a href="shipyard_compact"><b>Compact</b></a></h2>
+      <h2><a href="shipyard.php">Shipyard</a> / <a href="shipyard_compact.php"><b>Compact</b></a></h2>
 
         <div style="float: right!important; margin-top: -32px;">
           <div class="btn-group" style="margin:0 0 0 8px;">

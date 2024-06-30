@@ -777,7 +777,7 @@ function SetMission(value) {
       $("#modal_mission_btn").prop("disabled", false);
       $("#modal_mission_btn").click(function () {
         window.location.href =
-          "/fleet?type=" +
+          "/fleet.php?type=" +
           value.toLowerCase() +
           "&x=" +
           modalx +
@@ -789,7 +789,7 @@ function SetMission(value) {
         $("#modal_mission_btn").prop("disabled", false);
         $("#modal_mission_btn").click(function () {
           window.location.href =
-            "/fleet?type=" +
+            "/fleet.php?type=" +
             value.toLowerCase() +
             "&x=" +
             modalx +

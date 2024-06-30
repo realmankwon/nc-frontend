@@ -382,7 +382,7 @@ function Renderships() {
 
           temp_div = temp_div.replace(
             "onclick_",
-            "window.location.href = '/items'"
+            "window.location.href = '/items.php'"
           );
           temp_div = temp_div.replace("disabled_", "");
         }
@@ -397,7 +397,7 @@ function Renderships() {
           temp_div = temp_div.replace("bpl", left[cur_obj.type]);
           temp_div = temp_div.replace(
             "onclick_",
-            "window.location.href = '/shop'"
+            "window.location.href = '/shop.php'"
           );
           temp_div = temp_div.replace("disabled_", "");
         }
@@ -428,7 +428,7 @@ function Renderships() {
 
           temp_div = temp_div.replace(
             "onclick_",
-            "window.location.href = '/items'"
+            "window.location.href = '/items.php'"
           );
           temp_div = temp_div.replace("disabled_", "");
         }
@@ -444,7 +444,7 @@ function Renderships() {
         temp_div = temp_div.replace("bbdp", "none");
         temp_div = temp_div.replace(
           "onclick_",
-          "window.location.href = '/skills'"
+          "window.location.href = '/skills.php'"
         );
         temp_div = temp_div.replace("disabled_", "");
       }
@@ -456,7 +456,7 @@ function Renderships() {
         temp_div = temp_div.replace("bbdp", "block");
         temp_div = temp_div.replace(
           "onclick_",
-          "window.location.href = '/buildings'"
+          "window.location.href = '/buildings.php'"
         );
         temp_div = temp_div.replace("disabled_", "");
       }

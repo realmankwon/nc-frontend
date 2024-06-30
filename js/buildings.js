@@ -724,7 +724,7 @@ function RenderBuildings() {
         );
         temp_div = temp_div.replace(
           "onclick_",
-          "window.location.href = '/skills'"
+          "window.location.href = '/skills.php'"
         );
         temp_div = temp_div.replace("disabled_", "");
       }
